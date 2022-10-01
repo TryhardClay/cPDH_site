@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "Home"
-    url: /home/
   - title: "Decklist Database"
     url: /decklistdatabase/
   - title: "Metagame Stats"
