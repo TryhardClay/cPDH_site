@@ -3,7 +3,7 @@ main:
   - title: "Home"
     url: /index.html/
   - title: "Decklist Database"
-    url: /decklistdatabase.html/
+    url: /decklistdatabase/
   - title: "Metagame Stats"
     url: /metagamestats/
   - title: "Resources"
