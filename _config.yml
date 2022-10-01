@@ -24,8 +24,8 @@ description              : "Your go-to source for cPDH-related news, media, and 
 url                      : "https://tryhardclay.github.io/cPDH_site/"
 baseurl                  : "/index.html"
 repository               : "TryhardClay/cPDH_site"
-teaser                   : "/assets/images/logo.png"
-logo                     : # "/assets/images/logo.png"
+teaser                   : "/assets/images/Logo.png"
+logo                     : "/assets/images/Logo.png"
 masthead_title           : " "
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
