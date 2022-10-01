@@ -3,7 +3,7 @@ main:
   - title: "Home"
     url: /home/
   - title: "Decklist Database"
-    url: /home/
+    url: {% link _pages/decklistdatabase.md %}
   - title: "Metagame Stats"
     url: /home/
   - title: "Resources"
