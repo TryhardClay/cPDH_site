@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "default", "dirt"
 locale                   : "en-US"
 title                    : "cPDH.guide"
 title_separator          : "-"
-subtitle                 : "cPDH.guide - Everything Competitive Pauper Commander."
+subtitle                 : "Everything Competitive Pauper Commander."
 name                     : "by Tryhards Gaming, LLC"
 description              : "Your go-to source for cPDH-related news, media, and metagame data."
 url                      : "https://tryhardclay.github.io/cPDH_site/"
@@ -27,6 +27,7 @@ repository               : "TryhardClay/cPDH_site"
 teaser                   : "/assets/images/Logo.png"
 logo                     : "/assets/images/Logo.png"
 masthead_title           : " "
+
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -70,7 +71,7 @@ algolia:
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  search_engine_id       : b1ac0d69a0c0c46fa
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
