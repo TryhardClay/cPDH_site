@@ -1,12 +1,12 @@
 # main links
 main:
-  - name: Home
+  - title: "Home"
     link: /index.html
-  - name: Decklist Database
+  - title: "Decklist Database"
     link: /decklistdatabase
-  - name: Metagame Stats
+  - title: "Metagame Stats"
     link: /metagamestats
-  - name: Resources
+  - title: "Resources"
     link: /resources
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
