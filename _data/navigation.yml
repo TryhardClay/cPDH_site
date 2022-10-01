@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Home"
-    url: /home/
+    link: /index.html
   - title: "Decklist Database"
-    url: {% link _pages/decklistdatabase.md %}
+    link: /decklistdatabase.md
   - title: "Metagame Stats"
-    url: /home/
+    link: /metagamestats.md
   - title: "Resources"
-    url: /home/
+    link: /resources.md
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
