@@ -5,9 +5,9 @@ main:
   - title: "Decklist Database"
     link: /decklistdatabase/
   - title: "Metagame Stats"
-    link: _pages/metagamestats.html
+    link: /metagamestats/
   - title: "Resources"
-    link: _pages/resources.hmtl
+    link: /resources/
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
