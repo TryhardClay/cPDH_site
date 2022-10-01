@@ -1,9 +1,15 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Home"
-    url: /home.html/
+  #  url: /home.html/
+    - title: "Decklist Database"
+  #  url: /home.html/
+    - title: "Metagame Stats"
+  #  url: /home.html/
+    - title: "Resources"
+  #  url: /home.html/
+  # - title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
