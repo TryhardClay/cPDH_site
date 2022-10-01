@@ -3,11 +3,11 @@ main:
   - title: "Home"
     link: /index.html
   - title: "Decklist Database"
-    link: /decklistdatabase.md
+    link: _pages/decklistdatabase.md
   - title: "Metagame Stats"
-    link: /metagamestats.md
+    link: _pages/metagamestats.md
   - title: "Resources"
-    link: /resources.md
+    link: _pages/resources.md
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
