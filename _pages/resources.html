@@ -10,12 +10,17 @@ classes:
 ---
 
 <!-- Begin First Row of Table -->
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 <table class="dcf-table dcf-table-responsive dcf-table-bordered dcf-w-100%">
 	<tbody>
 		<tr>
-			<td class="dcf-txt-center">![PDHREC](assets/images/pdhrec.png)</td>
-			<td class="dcf-txt-center">![Scrollrack](assets/images/scrollrack.png){:class="img-responsive"}</td>
-			<td class="dcf-txt-center">![PDH Home Base](assets/images/pdhhomebase.png){:class="img-responsive"}</td>
+			<td class="dcf-txt-center">{% include image.html img="assets/images/pdhrec.png" %}</td>
+			<td class="dcf-txt-center">{% include image.html img="assets/images/scrollrack.png" %}</td>
+			<td class="dcf-txt-center">{% include image.html img="assets/images/pdhhomebase.png" %}</td>
 		</tr>
 		<tr>
       <td class="dcf-txt-center"><a href+"https://www.pdhrec.com>PDHREC</a></td>
@@ -28,4 +33,5 @@ classes:
 			<td class="dcf-txt-center">PDH Home Base is working towards popularizing and growing the Pauper EDH community, with the hopes of giving all players the resources they need to play this format.  This website has been created by fans, for fans.</td>
 		</tr>
 	</tbody>
+</style>
 </table>
