@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/mmistakes/minimal-mistakes/issues"
   },
-  "homepage": "https://cpdh.guide",
+  "homepage": "https://github.com/mmistakes/minimal-mistakes",
   "engines": {
     "node": ">= 0.10.0"
   },
