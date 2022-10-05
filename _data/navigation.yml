@@ -1,16 +1,12 @@
 # main links
 main:
   - title: "Decklist Database"
-    url: /decklistdatabase/
+    sublinks:
+    - title: "View Database"
+      url: /decklistdatabase/
+    - title: "Submit List"
+      url: /submissionform/
   - title: "Metagame Stats"
     url: /metagamestats/
   - title: "Resources"
     url: /resources/
-  # - title: "Quick-Start Guide"
-  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
