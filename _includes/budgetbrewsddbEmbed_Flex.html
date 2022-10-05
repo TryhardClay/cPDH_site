@@ -1,0 +1,35 @@
+<script>
+var buffer = 20; //scroll bar buffer
+var iframe = document.getElementById('responsive-iframe');
+
+function pageY(elem) {
+    return elem.offsetParent ? (elem.offsetTop + pageY(elem.offsetParent)) : elem.offsetTop;
+}
+
+function resizeIframe() {
+    var height = document.documentElement.clientHeight;
+    height -= pageY(document.getElementById('responsive-iframe'))+ buffer ;
+    height = (height < 0) ? 0 : height;
+    document.getElementById('responsive-iframe').style.height = height + 'px';
+}
+
+// .onload doesn't work with IE8 and older.
+if (iframe.attachEvent) {
+    iframe.attachEvent("onload", resizeIframe);
+} else {
+    iframe.onload=resizeIframe;
+}
+
+window.onresize = resizeIframe;
+</script>
+
+<div class="container">
+  <iframe
+      class="responsive-iframe"
+      src="https://budgetbrews.club/deck-lists/#pauper"
+      width="1350"
+      height="3000"
+      frameborder="0"
+      allowfullscreen="true">
+  </iframe>
+</div>
