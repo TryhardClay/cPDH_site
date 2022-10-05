@@ -1,11 +1,7 @@
 # main links
 main:
   - title: "Decklist Database"
-    sublinks:
-    - title: "View Database"
-      url: /decklistdatabase/
-    - title: "Submit List"
-      url: /submissionform/
+    url: /decklistdatabase/
   - title: "Metagame Stats"
     url: /metagamestats/
   - title: "Resources"
