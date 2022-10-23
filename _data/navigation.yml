@@ -6,5 +6,7 @@ main:
     url: /metagamestats/
   - title: "Resources"
     url: /resources/
+  - title: "1v1 PDC"
+    url: /1v1PDC/
   - title: "About"
     url: /about/
