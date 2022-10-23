@@ -1,3 +1,4 @@
+</head>
 <style>
 body {
     margin: 0;
@@ -19,13 +20,22 @@ body {
 }
 </style>
 
+<script> 
+  function moxfieldOnMessage(e){
+    const t=e.data;
+    if("object"==
+       typeof t&&"moxfield"===t.type){
+      const e=document.getElementById(t.id);e&&(e.style.height=t.data+"px")}}
+  function moxfieldOnLoad(e){e.target&&e.target.contentWindow&&e.target.contentWindow.postMessage({type:"moxfield",data:e.target.id},"*")}
+  window.addEventListener("message",moxfieldOnMessage); 
+</script>
+</head>
+
 <div class="parent">
   <div class="banner" style="height: 55px;"></div>
-   $.ajax({
-    url: "https://www.moxfield.com/decks/Yg0rvuin2Uyeiak1WboKJw/primer",
-    data: { uname: "test" },
-    type: "GET",
-    beforeSend: function(xhr){xhr.setRequestHeader('X-TOKEN', 'xxxxx');},
-    success: function() { alert('Success!' + authHeader); }
-});
+   <iframe src="https://www.moxfield.com/embed/Yg0rvuin2Uyeiak1WboKJw/primer"
+           id="moxfield-frame-1"
+           frameBorder="0"
+           onload="moxfieldOnLoad(event)">
+  </iframe>
  </div>
