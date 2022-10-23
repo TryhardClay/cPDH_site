@@ -19,8 +19,20 @@ body {
 }
 </style>
 
+<script> 
+  function moxfieldOnMessage(e)
+  {const t=e.data;if("object"==typeof t&&"moxfield"===t.type)
+  {const e=document.getElementById(t.id);e&&(e.style.height=t.data+"px")}}
+  function moxfieldOnLoad(e){e.target&&e.target.contentWindow&&e.target.contentWindow.postMessage({type:"moxfield",data:e.target.id},"*")}
+  window.addEventListener("message",moxfieldOnMessage); 
+</script>
+
 <div class="parent">
   <div class="banner" style="height: 55px;"></div>
-  <iframe src="https://www.moxfield.com/decks/Yg0rvuin2Uyeiak1WboKJw/primer">
+   <iframe src="https://www.moxfield.com/decks/Yg0rvuin2Uyeiak1WboKJw/primer"
+           id="moxfield-frame-1" 
+           frameBorder="0" 
+           width="700px" 
+           onload="moxfieldOnLoad(event)">
   </iframe>
 </div>
