@@ -21,5 +21,11 @@ body {
 
 <div class="parent">
   <div class="banner" style="height: 55px;"></div>
-   $( "#result" ).load( "https://www.moxfield.com/decks/Yg0rvuin2Uyeiak1WboKJw/primer" );
+   $.ajax({
+    url: "https://www.moxfield.com/decks/Yg0rvuin2Uyeiak1WboKJw/primer",
+    data: { uname: "test" },
+    type: "GET",
+    beforeSend: function(xhr){xhr.setRequestHeader('X-TOKEN', 'xxxxx');},
+    success: function() { alert('Success!' + authHeader); }
+});
  </div>
