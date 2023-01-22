@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "cPDH Compendium"
-    url: /decklistdatabase/
+    url: /compendium/
   - title: "Metagame Stats"
     url: /metagamestats/
   - title: "Resources"
