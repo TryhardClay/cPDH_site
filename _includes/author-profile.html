@@ -244,3 +244,255 @@
     </ul>
   </div>
 </div>
+
+
+
+
+
+
+{% assign coauthor = page.coauthor | default: page.coauthors[0] | default: site.coauthor %}
+{% assign coauthor = site.data.coauthors[coauthor] | default: coauthor %}
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  {% if coauthor.avatar %}
+    <div class="coauthor__avatar">
+      <a href="{{ coauthor.home | default: '/' | absolute_url }}">
+        <img src="{{ coauthor.avatar | relative_url }}" alt="{{ coauthor.name }}" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="coauthor__content">
+    <h3 class="coauthor__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="{{ coauthor.home | default: '/' | absolute_url }}" itemprop="url">{{ coauthor.name }}</a>
+    </h3>
+    {% if coauthor.bio %}
+      <div class="coauthor__bio p-note" itemprop="description">
+        {{ coauthor.bio | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="coauthor__urls-wrapper">
+    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <ul class="coauthor__urls social-icons">
+      {% if coauthor.location %}
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ coauthor.location }}</span>
+        </li>
+      {% endif %}
+
+      {% if coauthor.links %}
+        {% for link in coauthor.links %}
+          {% if link.label and link.url %}
+            <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if coauthor.uri %}
+        <li>
+          <a href="{{ coauthor.uri }}" itemprop="url" rel="me">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.email %}
+        <li>
+          <a href="mailto:{{ coauthor.email }}" rel="me" class="u-email">
+            <meta itemprop="email" content="{{ coauthor.email }}" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.keybase %}
+        <li>
+          <a href="https://keybase.io/{{ coauthor.keybase }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-keybase" aria-hidden="true"></i><span class="label">Keybase</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.twitter %}
+        <li>
+          <a href="https://twitter.com/{{ coauthor.twitter }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.facebook %}
+        <li>
+          <a href="https://www.facebook.com/{{ coauthor.facebook }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i><span class="label">Facebook</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.linkedin %}
+        <li>
+          <a href="https://www.linkedin.com/in/{{ coauthor.linkedin }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.xing %}
+        <li>
+          <a href="https://www.xing.com/profile/{{ coauthor.xing }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-xing-square" aria-hidden="true"></i><span class="label">XING</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.instagram %}
+        <li>
+          <a href="https://instagram.com/{{ coauthor.instagram }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.tumblr %}
+        <li>
+          <a href="https://{{ coauthor.tumblr }}.tumblr.com" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-tumblr-square" aria-hidden="true"></i><span class="label">Tumblr</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.bitbucket %}
+        <li>
+          <a href="https://bitbucket.org/{{ coauthor.bitbucket }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i><span class="label">Bitbucket</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.github %}
+        <li>
+          <a href="https://github.com/{{ coauthor.github }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.gitlab %}
+        <li>
+          <a href="https://gitlab.com/{{ coauthor.gitlab }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i><span class="label">GitLab</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.stackoverflow %}
+        <li>
+          <a href="https://stackoverflow.com/users/{{ coauthor.stackoverflow }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">Stack Overflow</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.lastfm %}
+        <li>
+          <a href="https://last.fm/user/{{ coauthor.lastfm }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-lastfm-square" aria-hidden="true"></i><span class="label">Last.fm</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.dribbble %}
+        <li>
+          <a href="https://dribbble.com/{{ coauthor.dribbble }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-dribbble" aria-hidden="true"></i><span class="label">Dribbble</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.pinterest %}
+        <li>
+          <a href="https://www.pinterest.com/{{ coauthor.pinterest }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-pinterest" aria-hidden="true"></i><span class="label">Pinterest</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.foursquare %}
+        <li>
+          <a href="https://foursquare.com/{{ coauthor.foursquare }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-foursquare" aria-hidden="true"></i><span class="label">Foursquare</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.steam %}
+        <li>
+          <a href="https://steamcommunity.com/id/{{ coauthor.steam }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-steam" aria-hidden="true"></i><span class="label">Steam</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.youtube %}
+        {% if coauthor.youtube contains "://" %}
+          <li>
+            <a href="{{ coauthor.youtube }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+              <i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span>
+            </a>
+          </li>
+        {% elsif coauthor.youtube %}
+          <li>
+            <a href="https://www.youtube.com/user/{{ coauthor.youtube }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+              <i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+
+      {% if coauthor.soundcloud %}
+        <li>
+          <a href="https://soundcloud.com/{{ coauthor.soundcloud }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i><span class="label">SoundCloud</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.weibo %}
+        <li>
+          <a href="https://www.weibo.com/{{ coauthor.weibo }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-weibo" aria-hidden="true"></i><span class="label">Weibo</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.flickr %}
+        <li>
+          <a href="https://www.flickr.com/{{ coauthor.flickr }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-flickr" aria-hidden="true"></i><span class="label">Flickr</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.codepen %}
+        <li>
+          <a href="https://codepen.io/{{ coauthor.codepen }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-codepen" aria-hidden="true"></i><span class="label">CodePen</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if coauthor.vine %}
+        <li>
+          <a href="https://vine.co/u/{{ coauthor.vine }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+            <i class="fab fa-fw fa-vine" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% include author-profile-custom-links.html %}
+    </ul>
+  </div>
+</div>
