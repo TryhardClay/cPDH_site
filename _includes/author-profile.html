@@ -1,6 +1,9 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
+<!-- Puzzle Code -->
+{% assign coauthor = page.coauthor | default: page.coauthors[0] | default: site.coauthor %}
+{% assign coauthor = site.data.coauthors[coauthor] | default: coauthor %}
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   {% if author.avatar %}
@@ -246,11 +249,7 @@
 </div>
 
 
-# Begin Puzzle 
-
-
-{% assign coauthor = page.coauthor | default: page.coauthors[0] | default: site.coauthor %}
-{% assign coauthor = site.data.coauthors[coauthor] | default: coauthor %}
+<!-- Begin Puzzle -->
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
