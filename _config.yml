@@ -134,35 +134,6 @@ author:
       icon: "fab fa-fw fa-discord"
       url: "https://discord.gg/wmUnvVS"
 
-# Site Coauthor
-author:
-  name             : "Puzzlebox"
-  avatar           : "/assets/images/puzz-avatar.png"
-  bio              : "Content Creator and Server Admin"
-  location         : # "Somewhere"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:gaming4tryhards@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/PuzzleboxDC"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-    - label: "Discord"
-      icon: "fab fa-fw fa-discord"
-      # url: "https://discord.gg/wmUnvVS"
 
 # Site Footer
 footer:
