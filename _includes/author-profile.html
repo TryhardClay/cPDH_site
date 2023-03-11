@@ -2,11 +2,6 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
-<!-- Puzzle Code -->
-{% assign coauthor = page.coauthor | default: page.coauthors[0] | default: site.coauthor %}
-{% assign coauthor = site.data.coauthors[coauthor] | default: coauthor %}
-
-
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   {% if author.avatar %}
@@ -82,89 +77,4 @@
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
-</div>
-
-
-<!-- Begin Puzzle
-
-  {% if coauthor.avatar %}
-    <div class="coauthor__avatar">
-      <a href="{{ author.home | default: '/' | absolute_url }}">
-        <img src="{{ coauthor.avatar | relative_url }}" alt="{{ coauthor.name }}" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  {% endif %}
-
-  <div class="coauthor__content">
-    <h3 class="coauthor__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="{{ coauthor.home | default: '/' | absolute_url }}" itemprop="url">{{ coauthor.name }}</a>
-    </h3>
-    {% if coauthor.bio %}
-      <div class="coauthor__bio p-note" itemprop="description">
-        {{ coauthor.bio | markdownify }}
-      </div>
-    {% endif %}
-  </div>
-
-  <div class="coauthor__urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
-    <ul class="coauthor__urls social-icons">
-      {% if coauthor.location %}
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ coauthor.location }}</span>
-        </li>
-      {% endif %}
-
-      {% if coauthor.links %}
-        {% for link in coauthor.links %}
-          {% if link.label and link.url %}
-            <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-
-      {% if coauthor.uri %}
-        <li>
-          <a href="{{ coauthor.uri }}" itemprop="url" rel="me">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
-          </a>
-        </li>
-      {% endif %}
-
-      {% if coauthor.email %}
-        <li>
-          <a href="mailto:{{ coauthor.email }}" rel="me" class="u-email">
-            <meta itemprop="email" content="{{ coauthor.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
-          </a>
-        </li>
-      {% endif %}
-
-      {% if coauthor.twitter %}
-        <li>
-          <a href="https://twitter.com/{{ coauthor.twitter }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span>
-          </a>
-        </li>
-      {% endif %}
-
-      {% if coauthor.youtube %}
-        {% if coauthor.youtube contains "://" %}
-          <li>
-            <a href="{{ coauthor.youtube }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-              <i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span>
-            </a>
-          </li>
-        {% elsif coauthor.youtube %}
-          <li>
-            <a href="https://www.youtube.com/user/{{ coauthor.youtube }}" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-              <i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span>
-            </a>
-          </li>
-        {% endif %}
-      {% endif %}
-
-      {% include author-profile-custom-links.html %}
-    </ul>
-  </div>  -->
 </div>
