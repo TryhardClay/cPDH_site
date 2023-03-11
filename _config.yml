@@ -137,7 +137,7 @@ author:
 # Site Coauthor
 coauthor:
   name             : "Puzzlebox"
-  avatar           : "/assets/images/puzz-avatar-small.png"
+  avatar           : "/assets/images/puzz-avatar.png"
   bio              : "Content Creator and Server Admin"
   location         : # "Somewhere"
   email            :
