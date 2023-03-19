@@ -7,46 +7,181 @@ classes:
   - wide
   - landing
   - dark-theme
-author_profile: true
-coauthor_profile: true
 ---
-<!--Google Ads -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About</title>
+	
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
      crossorigin="anonymous">
+	 
 </script>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <div id="about-content">
-            <h2>Origins of the DDB (now cPDH Compendium & Library)</h2>
-            <p>The Competitive Pauper Commander Decklist Database began in mid-2021 as a means to gain a broader community insight on what was considered 
-              to be "competitive" Pauper Commander. Other efforts within the community at the time attempted to leverage the singular expertise of a few select 
-              individuals - and that didn't seem quite right.</p>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex-basis: 30%;
+  max-width: 30%;
+  padding: 0 20px;
+}
+
+.left-column img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.left-column .author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.left-column h2 {
+  margin-bottom: 10px;
+}
+
+.left-column p {
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+  font-size: 24px;
+}
+
+.social-links a:hover {
+  color: #00bfff;
+}
+
+.right-column {
+  flex-basis: 70%;
+  max-width: 70%;
+  padding: 0 20px;
+}
+
+.right-column h2 {
+  margin-bottom: 20px;
+}
+
+.right-column p {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse; /* reverse the flex-direction */
+  }
+  
+  .left-column,
+  .right-column {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  
+  .left-column {
+    padding: 20px;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+}
+</style>	
+</head>
+<body>
+	<div class="container">
+		<div class="left-column">
+<!--clay info-->
+			<img src="/assets/images/avatar.jpg" alt="Clay">
+			<h2>_clay_</h2>
+			<p>Content Creator, Community Developer, and Member of the Pauper Commander Rules Committee</p>
+			<div class="social-links">
+				<a href="https://twitter.com/TheTryhards6"><i class="fab fa-twitter"></i></a>
+				<a href="mailto:gaming4tryhards@gmail.com"><i class="fas fa-fw fa-envelope-square"></i></a>
+			</div>
+		<br>
+<!--puzzle info-->
+			<img src="/assets/images/puzz-avatar.png" alt="Dallas">
+			<h2>Puzzlebox</h2>
+			<p>Content Creator and Discord Admin</p>
+			<div class="social-links">
+				<a href="https://twitter.com/PuzzleboxDC"><i class="fab fa-twitter"></i></a>
+			</div>
+		<br>			
+<!--jonathan info-->
+			<img src="/assets/images/jon-avatar.png" alt="Jonathan">
+			<h2>Xrlyly</h2>
+			<p>Metadata Analyst and Discord Moderator</p>
+			<!--
+			<div class="social-links">
+				<a href="https://www.facebook.com/johndoe"><i class="fab fa-facebook"></i></a>
+				<a href="https://twitter.com/johndoe"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/johndoe/"><i class="fab fa-instagram"></i></a>
+			</div>
+			-->
+		<br>
+<!--brandon info-->
+			<img src="/assets/images/bodarnn-avatar.png" alt="Brandon">
+			<h2>Bodarnn</h2>
+			<p>Metadata Analyst</p>
+			<!--
+			<div class="social-links">
+				<a href="https://www.facebook.com/johndoe"><i class="fab fa-facebook"></i></a>
+				<a href="https://twitter.com/johndoe"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/johndoe/"><i class="fab fa-instagram"></i></a>
+			</div>
+			-->
+		</div>
+		<div class="right-column">
+			<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div id="about-content">
+						<h2>Origins of the DDB (now cPDH Compendium & Library)</h2>
+						<p>The Competitive Pauper Commander Decklist Database began in mid-2021 as a means to gain a broader community insight on what was considered 
+						to be "competitive" Pauper Commander. Other efforts within the community at the time attempted to leverage the singular expertise of a few select 
+						individuals - and that didn't seem quite right.</p>
              
-            <p>So, we reached out to a number of other brewers within the community in an effort to develop a strategy meant to establish the tone of 
-              community consensus moving forward. <b>And the <i>infamous</i> Google Spreadsheet DDB was born!</b> From there, we established a relationship 
-              with Timmyt1000™ and BudgetBrews.club, stood up the first DDB Selection Committee, and the rest was history. Under that system, the cPDH 
-              Decklist Database thrived as a volunteer organized, compendium of player submitted decks where the decks adhered to a list of standards for public 
-              consumption.</p>
-            <p>By the beginning of 2023, there was a sea change in the way the public was using the DDB as a resource. It was no longer treated as the go-to resource 
-              for the most contemporary decks being played in meta, but rather, as a long form resource for sample cPDH decklists. It only made sense at that point to 
-              reconceptualize our efforts and rebrand the resource into the cPDH Library.</p>
-            <p><b><i>"Where's competitive edge in that," you might ask?</i></b> This is why <u>we love you...</u> In order to best represent the data collecting function of 
-              our metagame analysis project, the new landing page for the cPDH Library features a small cPDH Compendium of the most successful Commanders based on their recorded winrate 
-              data. As folks play those Commanders and submit more and more match data, that list will morph and grow in kind to reflect which decks are truly best within the format.</p>
-          <br>
-            <h2>Origins of cPDH.guide</h2>
-            <p>After about a year of community-based analysis on competitive archetypes, commander and color viability, etc., we still felt like we were missing something - something critical.
-              By that point, we had heavily discussed (and speculated) on the effects of various archetypes on the larger meta, but we had no real way of proving those claims.</p>
-            <p>Thus, in May 2022, we were the first to make publicly available all of our gameplay data from games played within the Tryhards Community (now, Common Connoisseurs) - and it exploded from there. For the first time ever,
-              brewers were incorporating meta trends and analysis into the construction of their decks, in real time. It was such a boon to the meta, we wanted to more widely distrubute the data in an effort to
-              assist the cPDH Community, at large.</p>
-           <br>
-            <p><i>Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 1993-2022 Wizards. All Rights Reserved.</i></p>
-            <br>
-            <p><i>"cPDH.guide" and any of its associated properties are not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. Tryhards Gaming LLC may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. MAGIC: THE GATHERING® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at https://company.wizards.com/.</i></p>
-        </div>
-    </div>
-</div>
-
+						<p>So, we reached out to a number of other brewers within the community in an effort to develop a strategy meant to establish the tone of 
+						community consensus moving forward. <b>And the <i>infamous</i> Google Spreadsheet DDB was born!</b> From there, we established a relationship 
+						with Timmyt1000™ and BudgetBrews.club, stood up the first DDB Selection Committee, and the rest was history. Under that system, the cPDH 
+						Decklist Database thrived as a volunteer organized, compendium of player submitted decks where the decks adhered to a list of standards for public 
+						consumption.</p>
+						<p>By the beginning of 2023, there was a sea change in the way the public was using the DDB as a resource. It was no longer treated as the go-to resource 
+						for the most contemporary decks being played in meta, but rather, as a long form resource for sample cPDH decklists. It only made sense at that point to 
+						reconceptualize our efforts and rebrand the resource into the cPDH Library.</p>
+						<p><b><i>"Where's competitive edge in that," you might ask?</i></b> This is why <u>we love you...</u> In order to best represent the data collecting function of 
+						our metagame analysis project, the new landing page for the cPDH Library features a small cPDH Compendium of the most successful Commanders based on their recorded winrate 
+						data. As folks play those Commanders and submit more and more match data, that list will morph and grow in kind to reflect which decks are truly best within the format.</p>
+						<br>
+						<h2>Origins of cPDH.guide</h2>
+						<p>After about a year of community-based analysis on competitive archetypes, commander and color viability, etc., we still felt like we were missing something - something critical.
+						By that point, we had heavily discussed (and speculated) on the effects of various archetypes on the larger meta, but we had no real way of proving those claims.</p>
+						<p>Thus, in May 2022, we were the first to make publicly available all of our gameplay data from games played within the Tryhards Community (now, Common Connoisseurs) - and it exploded from there. For the first time ever,
+						brewers were incorporating meta trends and analysis into the construction of their decks, in real time. It was such a boon to the meta, we wanted to more widely distrubute the data in an effort to
+						assist the cPDH Community, at large.</p>
+						<br>
+						<p><i>Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 1993-2022 Wizards. All Rights Reserved.</i></p>
+						<br>
+						<p><i>"cPDH.guide" and any of its associated properties are not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. Tryhards Gaming LLC may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. MAGIC: THE GATHERING® is a trademark of Wizards of the Coast. For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at https://company.wizards.com/.</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
