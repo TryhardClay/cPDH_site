@@ -34,59 +34,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
      crossorigin="anonymous">
 </script>
-	
-<!-- sheets scraping -->	
-<script>
-// Add your code to scrape and update data here
-// Load the Google Sheets API client library
-	
-gapi.load('client', initClient);
-
-function initClient() {
-  gapi.client.init({
-    apiKey: 'AIzaSyBjHOby7iJz6PBWSvUAKM0DtIglewTvIzY',
-    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-  }).then(function () {
-    // Call the Google Sheets API to get data for Table 1
-    gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: 'https://docs.google.com/spreadsheets/d/1I6583vcXqikExoe5imKeriYgeT2VULhj5uNWWmoijdQ/edit#gid=1698930466',
-      range: 'Formulas!AR2:AS16', // Update with your desired range for Table 1
-    }).then(function(response) {
-      var data = response.result.values;
-
-      // Update Table 1 on the page
-      var table1 = document.getElementById('table1');
-      for (var i = 0; i < data.length; i++) {
-        var row = table1.insertRow();
-        for (var j = 0; j < data[i].length; j++) {
-          var cell = row.insertCell(j);
-          cell.innerHTML = data[i][j];
-        }
-      }
-    });
-
-    // Call the Google Sheets API to get data for Table 2
-    gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: 'https://docs.google.com/spreadsheets/d/17YlskHc1M6TpwwXFC0hZ79hX8nRu4bwletWw8LLXM8U/edit#gid=0',
-      range: 'List!A1:C', // Update with your desired range for Table 2
-    }).then(function(response) {
-      var data = response.result.values;
-
-      // Update Table 2 on the page
-      var table2 = document.getElementById('table2');
-      for (var i = 0; i < data.length; i++) {
-        var row = table2.insertRow();
-        for (var j = 0; j < data[i].length; j++) {
-          var cell = row.insertCell(j);
-          cell.innerHTML = data[i][j];
-        }
-      }
-    });
-  });
-}
-</script>
-
-  </head>
+</head>
   
   <body>
 	<div class="container">
@@ -110,8 +58,53 @@ function initClient() {
 		<table id="table2"></table>
 	</div>
 
-	<!-- Add your scripts here -->
+<!-- Add your scripts here -->
+<!-- sheets scraping -->	
+<script>
+// Load the Google Sheets API client library
+  gapi.load('client', function() {
+    gapi.client.init({
+    apiKey: 'AIzaSyBjHOby7iJz6PBWSvUAKM0DtIglewTvIzY',
+    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+    }).then(function() {
+      // Call the Google Sheets API to get data for Table 1
+      gapi.client.sheets.spreadsheets.values.get({
+      spreadsheetId: 'https://docs.google.com/spreadsheets/d/1I6583vcXqikExoe5imKeriYgeT2VULhj5uNWWmoijdQ/edit#gid=1698930466',
+      range: 'Formulas!AR2:AS16'
+      }).then(function(response) {
+        var data = response.result.values;
 
+        // Update Table 1 on the page
+        var table1 = document.getElementById('table1');
+        for (var i = 0; i < data.length; i++) {
+          var row = table1.insertRow();
+          for (var j = 0; j < data[i].length; j++) {
+            var cell = row.insertCell(j);
+            cell.innerText = data[i][j];
+          }
+        }
+      });
+
+    // Call the Google Sheets API to get data for Table 2
+      gapi.client.sheets.spreadsheets.values.get({
+      spreadsheetId: 'https://docs.google.com/spreadsheets/d/17YlskHc1M6TpwwXFC0hZ79hX8nRu4bwletWw8LLXM8U/edit#gid=0',
+      range: 'List!A1:C'
+      }).then(function(response) {
+        var data = response.result.values;
+
+        // Update Table 2 on the page
+        var table2 = document.getElementById('table2');
+        for (var i = 0; i < data.length; i++) {
+          var row = table2.insertRow();
+          for (var j = 0; j < data[i].length; j++) {
+            var cell = row.insertCell(j);
+            cell.innerText = data[i][j];
+          }
+        }
+      });
+    });
+  });
+</script>
 	
 	</body>
 	</html>
