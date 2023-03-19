@@ -24,11 +24,18 @@ classes:
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px;
 }
 
 .left-column {
@@ -41,10 +48,10 @@ classes:
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border: 3px solid #ccc; /* add border to image */
-  border-radius: 50%; /* make the border round */
-  max-height: 1in; /* limit the size of the border to roughly 1 inch */
-  object-fit: cover; /* make sure the image covers the entire border */
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  max-height: 1in;
+  object-fit: cover;
 }
 
 .left-column .author-info {
@@ -52,6 +59,8 @@ classes:
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  border: 1px solid #ccc; /* add border to author-info */
+  padding: 20px; /* add some padding to author-info */
 }
 
 .left-column h2 {
@@ -89,7 +98,7 @@ classes:
 
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column-reverse; /* reverse the flex-direction */
+    flex-direction: column-reverse;
   }
   
   .left-column,
