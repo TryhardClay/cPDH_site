@@ -52,7 +52,7 @@ body {font-family: Arial;}
 <body>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '2023')">2023</button>
+  <button class="tablinks" onclick="openCity(event, '2023')" id="defaultOpen">2023</button>
   <button class="tablinks" onclick="openCity(event, 'All Time')">All Time</button>
 </div>
 
@@ -127,6 +127,9 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
    
 </body>
