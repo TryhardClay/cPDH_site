@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>cPDH Match Data</title>
-  <style>
-    .tabs {
-      border: 1px solid #ccc;
-      background-color: #252a34;
-      overflow: hidden;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
 
-    .tablinks {
-      background-color: #ddd;
-      color: black;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 10px;
-      margin-right: 5px;
-      margin-bottom: -1px;
-    }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #444444;
+}
 
-    .tabcontent {
-      display: none;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-    .tabcontent h2 {
-      margin-top: 0;
-    }
-  </style>
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
 
-  <!--Google Ads -->
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+
+<!--Google Ads -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
      crossorigin="anonymous">
   </script>
@@ -40,15 +51,15 @@
 </head>
 <body>
 
-<div class="tabs">
-  <button class="tablinks" onclick="openTab(event, 'tab1')">2023</button>
-  <button class="tablinks" onclick="openTab(event, 'tab2')">All Time</button>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, '2023')">2023</button>
+  <button class="tablinks" onclick="openCity(event, 'All Time')">All Time</button>
+</div>
 
-  <div id="2023" class="tabcontent">
-    <table>
+<div id="2023" class="tabcontent">
+  <table>
       <tbody>
         <tr>
-          <th>2023 Stats | <a href="https://www.google.com" target="_blank">All-time Stats</a></th>
           <th>Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></th>
         </tr>
         <tr>
@@ -72,12 +83,11 @@
         </tr>
       </tbody>
     </table>
-  </div>
+</div>
 
-  <div id="All Time" class="tabcontent">
-	<table>
+<div id="All Time" class="tabcontent">
+  <table>
       <tr>
-        <th><a href="https://www.google.com" target="_blank">2023 stats</a> | All-time Stats</th>
         <th>Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></th>
       </tr>
       <tr>
@@ -99,32 +109,25 @@
         <th>Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></th>
         <th><a href="https://docs.google.com/spreadsheets/d/104YL11_o-HgKGIam7S0WPC7OaSizYGlBOpqh2LtTMCM/edit?usp=sharing" target="_blank">See the data!</a></th>
       </tr>
-    </table>
-  </div>
-
+    </table> 
 </div>
 
-<script>
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
 
-  // Hide all tab content
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-
-  // Remove active class from tab links
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
+  document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 </script>
-
+   
 </body>
-</html>
+</html> 
