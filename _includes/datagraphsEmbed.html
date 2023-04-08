@@ -1,18 +1,89 @@
-<!--Google Ads -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed HTML Interface</title>
+  <style>
+    .tabs {
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    .tablinks {
+      background-color: #ddd;
+      color: black;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px;
+      margin-right: 5px;
+      margin-bottom: -1px;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .tabcontent h2 {
+      margin-top: 0;
+    }
+  </style>
+
+  <!--Google Ads -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
      crossorigin="anonymous">
+  </script>
+  
+</head>
+<body>
+
+<div class="tabs">
+  <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+  <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
+  <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+
+  <div id="tab1" class="tabcontent">
+    <h2>HTML code for Tab 1</h2>
+    <p>This is the HTML code for Tab 1.</p>
+  </div>
+
+  <div id="tab2" class="tabcontent">
+    <h2>HTML code for Tab 2</h2>
+    <p>This is the HTML code for Tab 2.</p>
+  </div>
+
+  <div id="tab3" class="tabcontent">
+    <h2>HTML code for Tab 3</h2>
+    <p>This is the HTML code for Tab 3.</p>
+  </div>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  // Hide all tab content
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove active class from tab links
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
 
-<div class="embed-container">
-  <iframe 
-          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTrQ148SAsDvlFhcUCbDmCDv_2JqdhW3LKBtAMlz_oLJSwD8PSh1tu4DMYqiMrl-DWcnmTF6eIwcaiA/pubhtml?gid=1533456073&single=true"
-               single="true&amp"
-               widget="true&amp"
-               headers="false"
-               width="1350"
-               height="3000"
-              frameborder="0"
-              allowfullscreen="true"
-              headers=false>
-  </iframe>
-  </div>
+</body>
+</html>
