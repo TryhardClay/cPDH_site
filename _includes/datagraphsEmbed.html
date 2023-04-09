@@ -5,43 +5,51 @@
          body {
          background-color: #1a1d24;
          color: #eaeaea;
-         font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+         font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
          }
          .tab {
-         overflow: hidden;
+         background-color: #252a34;         
          border: 1px solid #000000;
-         background-color: #252a34;
+         margin: 10px 20px 0px;
+         overflow: hidden;
          }
          .tab button {
-         background-color: inherit;
-         color: inherit;
-         float: left;
+         background-color: #252a34;
          border: none;
-         outline: none;
+         color: #eaeaea;
          cursor: pointer;
-         padding: 14px 16px;
-         transition: 0.3s;
+         float: left;
          font-size: 17px;
+         outline: none;
+         padding: 10px;
          }
          .tab button.active {
-         color: #8cd2d5;
          background-color: #252a34;
+         color: #8cd2d5;
          }
          .tabcontent {
          display: none;
-         padding: 6px 12px;
          }
          a {
          color: #8cd2d5;
          }
          table { 
          border-collapse: separate;
-         border-spacing: 15px;
+         border-spacing: 10px;
+         margin: 0px 10px 0px;
          }
-         td, th {
-         text-align:center;
+         .chart {
          background-color: #252a34;
          border: 1px solid #000000;
+         font-size: 17px;
+         text-align: center;
+         }
+         .text {
+         background-color: #252a34;
+         border: 1px solid #000000;
+         font-size: 17px;
+         text-align: center;
+         padding: 10px;
          }
       </style>
    </head>
@@ -54,27 +62,27 @@
          <table>
             <tbody>
                <tr>
-                  <th>Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></th>
-                  <th>Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></th>
+                  <td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
+                  <td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
                </tr>
                <tr>
-                  <td rowspan="2"><iframe width="575" height="775" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1196760428&amp;format=interactive"></iframe></td>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=731872428&amp;format=interactive"></iframe></td>
+                  <td rowspan="2" class="chart"><iframe width="575" height="775" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1196760428&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=731872428&amp;format=interactive"></iframe></td>
                </tr>
                <tr>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=588468970&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=588468970&amp;format=interactive"></iframe></td>
                </tr>
                <tr>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=581867652&amp;format=interactive"></iframe></td>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1141135873&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=581867652&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1141135873&amp;format=interactive"></iframe></td>
                </tr>
                <tr>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1254467827&amp;format=interactive"></iframe></td>
-                  <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=765811708&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1254467827&amp;format=interactive"></iframe></td>
+                  <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=765811708&amp;format=interactive"></iframe></td>
                </tr>
                <tr>
-                  <th><a href="https://docs.google.com/spreadsheets/d/104YL11_o-HgKGIam7S0WPC7OaSizYGlBOpqh2LtTMCM/edit?usp=sharing" target="_blank">See the data!</a></th>
-                  <th>Data dashboard by @Bodarnn</th>
+                  <td class="text"><a href="https://docs.google.com/spreadsheets/d/104YL11_o-HgKGIam7S0WPC7OaSizYGlBOpqh2LtTMCM/edit?usp=sharing" target="_blank">See the data!</a></td>
+                  <td class="text">Data dashboard by @Bodarnn</td>
                </tr>
             </tbody>
          </table>
@@ -82,27 +90,27 @@
       <div id="All-time Stats" class="tabcontent" style="display: none;">
          <table>
             <tbody><tr>
-               <th>Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></th>
-               <th>Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></th>
+               <td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
+               <td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
             </tr>
             <tr>
-               <td rowspan="2"><iframe width="575" height="775" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1285201675&amp;format=interactive"></iframe></td>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1220203623&amp;format=interactive"></iframe></td>
+               <td rowspan="2" class="chart"><iframe width="575" height="775" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1285201675&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1220203623&amp;format=interactive"></iframe></td>
             </tr>
             <tr>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=2008454372&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=2008454372&amp;format=interactive"></iframe></td>
             </tr>
             <tr>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=863842452&amp;format=interactive"></iframe></td>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=2115779897&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=863842452&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=2115779897&amp;format=interactive"></iframe></td>
             </tr>
             <tr>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=99354210&amp;format=interactive"></iframe></td>
-               <td><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=917119256&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=99354210&amp;format=interactive"></iframe></td>
+               <td class="chart"><iframe width="575" height="380" seamless="" frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=917119256&amp;format=interactive"></iframe></td>
             </tr>
             <tr>
-               <th><a href="https://docs.google.com/spreadsheets/d/104YL11_o-HgKGIam7S0WPC7OaSizYGlBOpqh2LtTMCM/edit?usp=sharing" target="_blank">See the data!</a></th>
-               <th>Data dashboard by @Bodarnn</th>
+               <td class="text"><a href="https://docs.google.com/spreadsheets/d/104YL11_o-HgKGIam7S0WPC7OaSizYGlBOpqh2LtTMCM/edit?usp=sharing" target="_blank">See the data!</a></td>
+               <td class="text">Data dashboard by @Bodarnn</td>
             </tr>
          </tbody></table>
       </div>
