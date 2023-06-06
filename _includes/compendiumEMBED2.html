@@ -1,110 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>cPDH Compendium & Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <style>
-      .container {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        padding: 10px;
-        box-sizing: border-box;
-      }
-      .container h2 {
-        margin-top: 0;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-      th, td {
-        text-align: left;
-        padding: 8px;
-        border-bottom: 1px solid #ddd;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
+<style>
+body {
+    margin: 0;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.parent .banner {
+    background: #202424;
+    width: 100%;
+    height: 30px;
+}
+.parent iframe {
+    background: #000;
+    border: none;
+    flex-grow: 1;
+}
+</style>
 
-<!-- google ads -->	
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
-     crossorigin="anonymous">
-</script>
-</head>
-  
-  <body>
-	<div class="container">
-		<table>
-			<tbody>
-				<tr>
-				<th>Submit a list: <a href="https://dyno.gg/form/7d79e41e" target="_blank">https://dyno.gg/form/7d79e41e</a></th>
-				<th>Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></th>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	
-	<div class="container">
-		<h2>cPDH Compendium</h2>
-		<table id="table1"></table>
-	</div>
-
-	<div class="container">
-		<h2>cPDH Library</h2>
-		<table id="table2"></table>
-	</div>
-
-<!-- Add your scripts here -->
-<!-- sheets scraping -->	
-<script>
-// Load the Google Sheets API client library
-  gapi.load('client', function() {
-    gapi.client.init({
-    apiKey: 'AIzaSyBjHOby7iJz6PBWSvUAKM0DtIglewTvIzY',
-    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-    }).then(function() {
-      // Call the Google Sheets API to get data for Table 1
-      gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: 'https://docs.google.com/spreadsheets/d/1I6583vcXqikExoe5imKeriYgeT2VULhj5uNWWmoijdQ/edit#gid=1698930466',
-      range: 'Formulas!AR2:AS16'
-      }).then(function(response) {
-        var data = response.result.values;
-
-        // Update Table 1 on the page
-        var table1 = document.getElementById('table1');
-        for (var i = 0; i < data.length; i++) {
-          var row = table1.insertRow();
-          for (var j = 0; j < data[i].length; j++) {
-            var cell = row.insertCell(j);
-            cell.innerText = data[i][j];
-          }
-        }
-      });
-
-    // Call the Google Sheets API to get data for Table 2
-      gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: 'https://docs.google.com/spreadsheets/d/17YlskHc1M6TpwwXFC0hZ79hX8nRu4bwletWw8LLXM8U/edit#gid=0',
-      range: 'List!A1:C'
-      }).then(function(response) {
-        var data = response.result.values;
-
-        // Update Table 2 on the page
-        var table2 = document.getElementById('table2');
-        for (var i = 0; i < data.length; i++) {
-          var row = table2.insertRow();
-          for (var j = 0; j < data[i].length; j++) {
-            var cell = row.insertCell(j);
-            cell.innerText = data[i][j];
-          }
-        }
-      });
-    });
-  });
-</script>
-	
-	</body>
-	</html>
+<div class="parent">
+  <div class="banner" style="height: 55px;"><h1><center><a href="https://dyno.gg/form/7d79e41e">SUBMIT YOUR DECKLIST HERE</a></center></h1></div>
+  <iframe src="https://script.google.com/macros/s/AKfycbyjS7PNSezWr5i-yODpD1eu6YHOnxL2MThYb2RhSQLb6cWCbiQGNdaz8Fg5ECdQxXIv/exec">
+  </iframe>
+</div>
