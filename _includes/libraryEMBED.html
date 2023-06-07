@@ -1,21 +1,38 @@
-<style>
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 200vh;
-  justify-content: center;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #262a35;
+    }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-</style>
-<div class="flex-container">
-   <iframe src="https://script.google.com/macros/s/AKfycbzrYW0Bm4qVxuy-baOvTblBQ_EntCksQuKA-N4hU8aJ3-ZDrC3vL_PphNhJXPNt86sF/exec">
-  </iframe>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .parent .banner {
+      height: 30px;
+      background-color: #262a35;
+      /* Add any styles for the banner here */
+    }
+
+    .parent iframe {
+      border: none;
+      flex-grow: 1;
+      width: 100%;
+      height: calc(100vh - 30px);
+    }
+  </style>
+</head>
+<body>
+<div class="parent">
+  <div class="banner"></div>
+  <iframe src="https://script.google.com/macros/s/AKfycbywQWK5qws8pGPtSaraKAEadU6FaK1IWzmInQUPgD903EYFR_syf8lmMVWdRJPb0512/exec"></iframe>
 </div>
+</body>
+</html>
