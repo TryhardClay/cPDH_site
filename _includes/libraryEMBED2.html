@@ -1,38 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      background-color: #262a35;
-    }
+<html><head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {
+         background-color: #1a1d24;
+         color: #eaeaea;
+         font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+         }
+         .tab {
+         background-color: #252a34;         
+         border: 1px solid #000000;
+         margin: 10px 20px 0px;
+         overflow: hidden;
+         }
+         .tab button {
+         background-color: #252a34;
+         border: none;
+         color: #eaeaea;
+         cursor: pointer;
+         float: left;
+         font-size: 17px;
+         outline: none;
+         padding: 10px;
+         }
+         .tab button.active {
+         background-color: #252a34;
+         color: #8cd2d5;
+         }
+         .tabcontent {
+         display: none;
+         }
+         a {
+         color: #8cd2d5;
+         }
+         table { 
+         border-collapse: separate;
+         border-spacing: 10px;
+         margin: 0px 10px 0px;
+         }
+         .chart {
+         background-color: #252a34;
+         border: 1px solid #000000;
+         font-size: 17px;
+         text-align: center;
+         }
+         .text {
+         background-color: #252a34;
+         border: 1px solid #000000;
+         font-size: 17px;
+         text-align: center;
+         padding: 10px;
+         }
+      </style>
+   </head>
+   <body>
 
-    .parent {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+      <div class="tab">
+         <button class="tablinks active" onclick="openCity(event, 'Compendium')">Compendium</button>
+         <button class="tablinks" onclick="openCity(event, 'Library')">cPDH Library</button>
+      </div>
+      
+	<div id="Compendium" class="tabcontent" style="display: block;">
+     	<iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1813884325&amp;format=interactive"
+	</iframe> 
+   	 </div>
 
-    .parent .banner {
-      height: 30px;
-      background-color: #262a35;
-      /* Add any styles for the banner here */
-    }
 
-    .parent iframe {
-      border: none;
-      flex-grow: 1;
-      width: 100%;
-      height: calc(100vh - 30px);
-    }
-  </style>
-</head>
-<body>
-<div class="parent">
-  <div class="banner"></div>
-  <iframe src="https://script.google.com/macros/s/AKfycbywQWK5qws8pGPtSaraKAEadU6FaK1IWzmInQUPgD903EYFR_syf8lmMVWdRJPb0512/exec"></iframe>
-</div>
-</body>
-</html>
+      <div id="Library" class="tabcontent" style="display: none;">
+        <iframe src="https://script.google.com/macros/s/AKfycbywQWK5qws8pGPtSaraKAEadU6FaK1IWzmInQUPgD903EYFR_syf8lmMVWdRJPb0512/exec"></iframe>
+      </div>
+      
+	<script>
+         function openCity(evt, cityName) {
+           var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("tabcontent");
+           for (i = 0; i < tabcontent.length; i++) {
+             tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablinks");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           document.getElementById(cityName).style.display = "block";
+           evt.currentTarget.className += " active";
+         }
+      </script>
+   
+</body></html>
