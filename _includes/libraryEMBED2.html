@@ -61,6 +61,13 @@
       text-align: center;
       padding: 10px;
     }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      .tab button {
+        width: 50%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -84,6 +91,3 @@
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i
