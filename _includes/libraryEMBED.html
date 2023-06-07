@@ -9,6 +9,21 @@
       background-color: #262a35;
     }
 
+    .content {
+      padding: 20px;
+    }
+
+    .content p {
+      margin: 0 0 10px;
+    }
+
+    .content iframe {
+      width: 100%;
+      height: 400px;
+      max-width: 700px;
+      border: none;
+    }
+
     .parent {
       display: flex;
       flex-direction: column;
@@ -27,9 +42,22 @@
       width: 100%;
       height: calc(100vh - 30px);
     }
+
+    @media (max-width: 768px) {
+      .content iframe {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
+<div class="content">
+  <p>For sample decklists, check out the <a href="https://cpdh.guide/library/">cPDH Library</a>.</p>
+  <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThYJPamhVZPe03cZXTFz-dUK7Kx7tQEPc1cBx-1ITCr13vAGM7eWNz95mpwwfqh8ROVciqo-CHsmRh/pubchart?oid=1813884325&amp;format=interactive"></iframe>
+  <p>To qualify for this list, Commanders must place within the top 15% of played decks that win more than average. Of that group, the Commanders above are the Top 10 results.</p>
+  <p>For more data, check out the <a href="https://cpdh.guide/metagamestats/">Metagame Stats</a>.</p>
+</div>
+
 <div class="parent">
   <div class="banner"></div>
   <iframe src="https://script.google.com/macros/s/AKfycbywQWK5qws8pGPtSaraKAEadU6FaK1IWzmInQUPgD903EYFR_syf8lmMVWdRJPb0512/exec"></iframe>
