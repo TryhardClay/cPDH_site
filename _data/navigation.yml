@@ -3,7 +3,7 @@ main:
   - title: "Compendium/Library"
     url: /library/
   - title: "Metagame Stats"
-    url: /metagamestats/
+    url: /stats/
   - title: "Resources"
     url: /resources/
   # - title: "1v1 PDC"
