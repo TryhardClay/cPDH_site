@@ -1,24 +1,63 @@
-<!--Google Ads -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8379807582901299"
-     crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Metagame Stats</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tab {
+  width: 50%;
+  margin: 0 0 10px 0;
+}
+
+.embed {
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="tabs">
+  <div class="tab">
+    <h2>Metagame Stats</h2>
+    <iframe class="embed" src="https://lookerstudio.google.com/s/s5AaVmAFiqg"></iframe>
+  </div>
+  <div class="tab">
+    <h2>Commanders</h2>
+    <iframe class="embed" width="600" height="400" src="https://lookerstudio.google.com/embed/reporting/14d15235-575f-4dca-8751-b7797598765e/page/JaCSD" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+<script>
+var isMobile = window.innerWidth < 768;
+
+if (isMobile) {
+  // Hide the tabs on mobile
+  document.querySelector(".tabs").style.display = "none";
+
+  // Show the embeds on mobile
+  document.querySelectorAll(".embed").forEach(function(embed) {
+    embed.style.width = "100vw";
+    embed.style.height = "100vh";
+  });
+} else {
+  // Show the tabs on desktop
+  document.querySelector(".tabs").style.display = "block";
+
+  // Adjust the width of the embeds on desktop
+  document.querySelectorAll(".embed").forEach(function(embed) {
+    embed.style.width = "50%";
+    embed.style.height = "auto";
+  });
+}
 </script>
-
-<div>
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKDHz2Uj6aWZOZphW3KR_qzwnd7jN-rvmkhcKNccTJatiNAI07VHbsNcVXsshCcXDjAFdGKCEefKM/pubchart?oid=1477272738&amp;format=interactive"></iframe>
-    </div>
-
-<div>
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKDHz2Uj6aWZOZphW3KR_qzwnd7jN-rvmkhcKNccTJatiNAI07VHbsNcVXsshCcXDjAFdGKCEefKM/pubchart?oid=837764692&amp;format=interactive"></iframe>
-    </div>
-  
-<div>
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKDHz2Uj6aWZOZphW3KR_qzwnd7jN-rvmkhcKNccTJatiNAI07VHbsNcVXsshCcXDjAFdGKCEefKM/pubchart?oid=2003536695&amp;format=interactive"></iframe>
-    </div>
-
-<div>
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKDHz2Uj6aWZOZphW3KR_qzwnd7jN-rvmkhcKNccTJatiNAI07VHbsNcVXsshCcXDjAFdGKCEefKM/pubchart?oid=1535935873&amp;format=interactive"></iframe>
-  </div>
-
-<div>
-  <iframe width="600" height="2297" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKDHz2Uj6aWZOZphW3KR_qzwnd7jN-rvmkhcKNccTJatiNAI07VHbsNcVXsshCcXDjAFdGKCEefKM/pubchart?oid=1601171897&amp;format=interactive"></iframe>
-  </div>
+</body>
+</html>
