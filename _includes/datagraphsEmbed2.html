@@ -23,13 +23,24 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .tabs {
+    display: none;
+  }
+
+  .embed {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 </style>
 </head>
 <body>
 <div class="tabs">
   <div class="tab">
     <h2>Metagame Stats</h2>
-    <iframe class="embed" src="https://lookerstudio.google.com/s/s5AaVmAFiqg"></iframe>
+    <iframe class="embed" width="600" height="400" src="https://lookerstudio.google.com/s/s5AaVmAFiqg" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
   <div class="tab">
     <h2>Commanders</h2>
@@ -37,27 +48,6 @@ body {
   </div>
 </div>
 <script>
-var isMobile = window.innerWidth < 768;
-
-if (isMobile) {
-  // Hide the tabs on mobile
-  document.querySelector(".tabs").style.display = "none";
-
-  // Show the embeds on mobile
-  document.querySelectorAll(".embed").forEach(function(embed) {
-    embed.style.width = "100vw";
-    embed.style.height = "100vh";
-  });
-} else {
-  // Show the tabs on desktop
-  document.querySelector(".tabs").style.display = "block";
-
-  // Adjust the width of the embeds on desktop
-  document.querySelectorAll(".embed").forEach(function(embed) {
-    embed.style.width = "50%";
-    embed.style.height = "auto";
-  });
-}
 </script>
 </body>
 </html>
