@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html><head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      
+<style>
          body {
          background-color: #1a1d24;
          color: #eaeaea;
@@ -38,12 +41,6 @@
          border-spacing: 10px;
          margin: 0px 10px 0px;
          }
-         .chart {
-         background-color: #252a34;
-         border: 1px solid #000000;
-         font-size: 17px;
-         text-align: center;
-         }
          .text {
          background-color: #252a34;
          border: 1px solid #000000;
@@ -55,49 +52,44 @@
   		 max-width: 100%;
   		 max-height: 100vh;
 		}
-      </style>
-   </head>
-   <body>
+</style>
+</head>
    
-      <div class="tab">
-         <button class="tablinks active" onclick="openTab(event, 'Metagame Stats')">Metagame Stats</button>
-         <button class="tablinks" onclick="openTab(event, 'Commander Data')">Commander Data</button>
-      </div>
+<body>
+   
+<div class="tab">
+     <button class="tablinks active" onclick="openCity(event, 'Metagame Stats')" id="defaultOpen">Metagame Stats</button>
+     <button class="tablinks" onclick="openCity(event, 'Commander Data')">Commander Data</button>
+</div>
       
       
 <div id="Metagame Stats" class="tabcontent" style="display: block;">
-         <table>
-            <tbody>
-               <tr>
-                  <td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
-                  <td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
                
-	  <div class="embed"><iframe width="600" height="500" seamless="" frameborder="0" scrolling="no" src="https://lookerstudio.google.com/embed/reporting/e6465966-c3f7-442c-9fb5-1a2f616882a0/page/8AmSD"></iframe>
-     </div>
+<div class="embed"><iframe width="700" height="625" seamless="" frameborder="0" scrolling="no" src="https://lookerstudio.google.com/embed/reporting/e6465966-c3f7-442c-9fb5-1a2f616882a0/page/8AmSD"></iframe>
+</div>
+
+<table><tbody><tr>
+<td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
+<td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
+</tr></tbody></table>
+</div>
                
                
 
 <div id="Commander Data" class="tabcontent" style="display: none;">
-         <table>
-            <tbody>
-               <tr>
-                  <td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
-                  <td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
-               
-	  <div class="embed"><iframe width="600" height="425" seamless="" frameborder="0" scrolling="no" src="https://lookerstudio.google.com/embed/reporting/14d15235-575f-4dca-8751-b7797598765e/page/JaCSD"></iframe>
-     </div>
+           
+<div class="embed"><iframe width="700" height="525" seamless="" frameborder="0" scrolling="no" src="https://lookerstudio.google.com/embed/reporting/14d15235-575f-4dca-8751-b7797598765e/page/JaCSD"></iframe>
+</div>
+
+<table><tbody><tr>
+<td class="text">Submit a game: <a href="https://dyno.gg/form/c87c8330" target="_blank">https://dyno.gg/form/c87c8330</a></td>
+<td class="text">Join the discord: <a href="https://discord.com/invite/UtgN272kpq" target="_blank">https://discord.com/invite/UtgN272kpq</a></td>
+</tr></tbody></table>
+</div>
      
      
-      <script>
-         function openTab(evt, tabName) {
+<script>
+         function openCity(event, tabName) {
            var i, tabcontent, tablinks;
            tabcontent = document.getElementsByClassName("tabcontent");
            for (i = 0; i < tabcontent.length; i++) {
@@ -110,6 +102,8 @@
            document.getElementById(tabName).style.display = "block";
            evt.currentTarget.className += " active";
          }
-      </script>
+
+	document.getElementById("defaultOpen").click();
+</script>
    
 </body></html>
