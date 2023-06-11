@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Metagame Stats</title>
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.tab {
-  width: 50%;
-  margin: 0 0 10px 0;
-}
-
-.embed {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .tabs {
-    display: none;
-  }
-
-  .embed {
-    width: 100vw;
-    height: 100vh;
-  }
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #1a1d24;
+            color: #eaeaea;
+            font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+        }
+        .tab {
+            background-color: #252a34;
+            border: 1px solid #000000;
+            margin: 10px 20px 0px;
+            overflow: hidden;
+        }
+        .tab button {
+            background-color: #252a34;
+            border: none;
+            color: #eaeaea;
+            cursor: pointer;
+            float: left;
+            font-size: 17px;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+        }
+        .tab button.active {
+            background-color: #252a34;
+            color: #8cd2d5;
+        }
+        .tabcontent {
+            display: none;
+        }
+        a {
+            color: #8cd2d5;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            margin: 0px 10px 0px;
+        }
+        .chart {
+            background-color: #252a34;
+            border: 1px solid #000000;
+            font-size: 17px;
+            text-align: center;
+        }
+        .text {
+            background-color: #252a34;
+            border: 1px solid #000000;
+            font-size: 17px;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-<div class="tabs">
-  <div class="tab">
-    <h2>Metagame Stats</h2>
-    <iframe class="embed" width="600" height="400" src="https://lookerstudio.google.com/s/s5AaVmAFiqg" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-  <div class="tab">
-    <h2>Commanders</h2>
-    <iframe class="embed" width="600" height="400" src="https://lookerstudio.google.com/embed/reporting/14d15235-575f-4dca-8751-b7797598765e/page/JaCSD" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-</div>
-<script>
-</script>
-</body>
-</html>
+    <div class="tab">
+        <button class="tablinks active" onclick="openCity(event, 'Metagame Stats')">2023 Stats</button>
+        <button class="tablinks" onclick="openCity(event, 'Commander Data')">All-time Stats</button>
+    </div>
+    <div id="Metagame Stats" class="tabcontent" style="display: block;">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="text"><a href="https://dyno.gg/form/c87c8330" target="_blank">Submit a game</a></td>
+                    <td class="text"><a href="https://discord.com/invite/UtgN272kpq" target="_blank">Join the discord</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <iframe class="embed" src="https://lookerstudio.google.com/s/s5AaVmAFiqg" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div id="Commander Data" class="tabcontent" style="display: none;">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="text"><a href="https://dyno.gg/form/c87c8330" target="_blank">Submit a game</a></td>
+                    <td class="text"><a href="https://discord.com/invite/UtgN272kpq" target="_blank">Join the discord</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <iframe class="embed" src="https://lookerstudio.google.com/embed/reporting/14d15235-575f-4dca-8751-b7797598765e/page/JaCSD" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <script>
+        function openCity(evt, cityName) {
